@@ -6,16 +6,11 @@ public class Intro {
 		System.out.println("Hello World!");
 
 		String ortaMetin = "İlginizi çekebilir";
-		String altMetin = "Vade süresi";
 
 		System.out.println(ortaMetin);
 
-		int vade = 12;
-
 		double dolarDun = 18.32;
 		double dolarBugun = 18.30;
-
-		boolean dolarDustumu = false;
 
 		String okYonu = "";
 
