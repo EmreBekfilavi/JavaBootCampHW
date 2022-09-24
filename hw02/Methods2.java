@@ -13,8 +13,10 @@ public class Methods2 {
 		double multiNumbers = multiple(2, 3, 4);
 		System.out.println(multiNumbers);
 
-		double divNumbers = division(20, 5, 2);
-		System.out.println(divNumbers);
+		double divNumbers = division(40, 0, 2);
+		divMessage(divNumbers);
+		
+		
 
 	}
 
@@ -62,12 +64,34 @@ public class Methods2 {
 		double div = num[0];
 
 		for (int i = 1; i < num.length; i++) {
+			
+			if(num[i] == 0) {
+				
+				div = 0;
+				break;
+				
+			}
 
 			div = div / num[i];
 
 		}
 
 		return div;
+	}
+	
+	public static void divMessage(double num) {
+		
+		if(num == 0) {
+			
+			System.out.println("You can't divide any number to 0, the result will be Infinity");
+			
+		}
+		else {
+			
+			System.out.println(num);
+			
+		}
+			
 	}
 
 }
