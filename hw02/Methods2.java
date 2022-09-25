@@ -10,13 +10,11 @@ public class Methods2 {
 		int subNumbers = sub(5, 18, 5);
 		System.out.println(subNumbers);
 
-		double multiNumbers = multiple(2, 3, 4);
+		double multiNumbers = multiple(24, 48, 56);
 		System.out.println(multiNumbers);
 
-		double divNumbers = division(40, 0, 2);
+		double divNumbers = division(40, 2, 2);
 		divMessage(divNumbers);
-		
-		
 
 	}
 
