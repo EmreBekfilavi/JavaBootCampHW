@@ -3,7 +3,7 @@ package hw01;
 public class MuqSayilar {
 
 	public static void main(String[] args) {
-		int num = 8;
+		int num = 6;
 		int remainder = 0;
 		int sum = 0;
 

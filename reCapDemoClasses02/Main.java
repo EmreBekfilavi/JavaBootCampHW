@@ -15,8 +15,9 @@ public class Main {
 		double resultMultiple = fourOperations.Multiple(6,5,4,3,2);
 		System.out.println(resultMultiple);
 		
-		double resultDivision = fourOperations.Division(40,0,5);
+		double resultDivision = fourOperations.Division(40,2,5);
 		fourOperations.DivMessage(resultDivision);
+		
 
 	}
 
