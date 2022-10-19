@@ -16,9 +16,11 @@ public class Main {
 		
 		Category category1 = new Category("Programming");
 		Category category2 = new Category("Data Structure");
+		Category category3 = new Category("Design");
 		
 		Course course1 = new Course("Emre Bekfilavi ","Java ", 200);
 		Course course2 = new Course("Mert Bekfilavi ","Oracle ", 350);
+		Course course3 = new Course("Reşat Bekfilavi ","MySql Design ", 450);
 		
 		ILogger[] loggers = {new MailLogger(), new SmsLogger()};
 		
@@ -30,6 +32,9 @@ public class Main {
 		
 		categoryManager.add(category2);
 		courseManager.add(course2);
+		
+		categoryManager.add(category3);
+		courseManager.add(course3);
 		
 
 	}
