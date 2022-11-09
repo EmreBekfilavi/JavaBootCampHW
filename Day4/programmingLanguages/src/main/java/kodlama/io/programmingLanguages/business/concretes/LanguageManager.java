@@ -2,6 +2,7 @@ package kodlama.io.programmingLanguages.business.concretes;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kodlama.io.programmingLanguages.business.abstracts.ILanguageService;
@@ -13,6 +14,7 @@ public class LanguageManager implements ILanguageService {
 
 	ILanguageRepository languageRepository;
 
+	@Autowired
 	public LanguageManager(ILanguageRepository languageRepository) {
 
 		this.languageRepository = languageRepository;
