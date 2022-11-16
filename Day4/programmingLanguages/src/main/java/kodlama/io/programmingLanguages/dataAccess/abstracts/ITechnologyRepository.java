@@ -1,15 +1,10 @@
 package kodlama.io.programmingLanguages.dataAccess.abstracts;
 
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import kodlama.io.programmingLanguages.entities.Technology;
 
-public interface ITechnologyRepository {
+public interface ITechnologyRepository extends JpaRepository<Technology, Integer> {
 
-	List<Technology> getAll();
-	void add(Technology technology) throws Exception;
-	void delete(int id);
-	void update(Technology technology, int id);
-	Technology getById(int id);
 
 }

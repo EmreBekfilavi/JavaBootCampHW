@@ -1,5 +1,6 @@
 package kodlama.io.programmingLanguages.entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,23 +14,24 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Table(name="Technologies")
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name="technologies")
 public class Technology {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "TechId")
+	@Column(name = "id")
 	private int id;
 	
-	@Column(name = "TechnologyName")
+	@Column(name = "name")
 	private String name;
 	
-	@ManyToOne
-	@JoinColumn(name="LanguageName")
+	@ManyToOne(cascade = CascadeType.DETACH)
+	@JoinColumn(name="languages_id")
 	private Language language;
 
 }

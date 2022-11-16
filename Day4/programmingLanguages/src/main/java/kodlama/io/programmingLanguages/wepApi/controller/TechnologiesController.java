@@ -13,6 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import kodlama.io.programmingLanguages.business.abstracts.ITechnologyService;
+import kodlama.io.programmingLanguages.business.request.technology.CreateTechnologyRequest;
+import kodlama.io.programmingLanguages.business.request.technology.DeleteTechnologyRequest;
+import kodlama.io.programmingLanguages.business.request.technology.UpdateTechnologyRequest;
+import kodlama.io.programmingLanguages.business.response.GetAllTechnologyResponse;
 import kodlama.io.programmingLanguages.entities.Technology;
 
 @RestController
@@ -27,23 +31,23 @@ public class TechnologiesController {
 	}
 	
 	@GetMapping("/getall")
-	public List<Technology> getAll(){
+	public List<GetAllTechnologyResponse> getAll(){
 		return technologyService.getAll();
 	}
 	
 	@PostMapping("/addtech")
-	void add(@RequestBody Technology technology) throws Exception {
-		technologyService.add(technology);
+	void add(@RequestBody CreateTechnologyRequest createTechnologyRequest) throws Exception {
+		technologyService.add(createTechnologyRequest);
 	}
 	
 	@DeleteMapping("/{id}")
-	void delete(@PathVariable int id) {
-		technologyService.delete(id);
+	void delete(@PathVariable DeleteTechnologyRequest deleteTechnologyRequest) {
+		technologyService.delete(deleteTechnologyRequest);
 	}
 	
 	@PutMapping("/updatetech")
-	void update(@RequestBody Technology technology,int id) throws Exception {
-		technologyService.update(technology,id);
+	void update(@RequestBody UpdateTechnologyRequest updateTechnologyRequest) throws Exception {
+		technologyService.update(updateTechnologyRequest);
 	}
 	
 	@GetMapping("/{id}")
